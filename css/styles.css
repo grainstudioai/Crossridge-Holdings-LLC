@@ -434,14 +434,14 @@ summary:focus-visible {
 .hero-address-bar {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.6rem;
   max-width: 640px;
   margin: 0 auto var(--space-5);
   background: var(--white);
   border: 1px solid var(--border-soft);
   border-radius: 999px;
-  padding: 0.5rem;
+  padding: 0.6rem;
   box-shadow: var(--shadow-soft);
   text-align: left;
 }
@@ -453,8 +453,11 @@ summary:focus-visible {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.55rem 0.85rem;
-  color: var(--text-muted);
+  padding: 0.75rem 1rem;
+  color: var(--orange);
+  background: var(--offwhite);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
 }
 .hero-address-bar-input input {
   flex: 1;
@@ -470,6 +473,11 @@ summary:focus-visible {
   flex: none;
   border-radius: 999px;
   white-space: nowrap;
+  padding-block: 1.05rem;
+  background: linear-gradient(135deg, var(--orange-deep) 0%, var(--orange) 100%);
+}
+.hero-address-bar .btn:hover {
+  background: linear-gradient(135deg, var(--orange-deep) 0%, var(--orange-deep) 100%);
 }
 .hero-address-bar .form-error-msg { padding-left: 0.85rem; }
 @media (max-width: 560px) {
