@@ -185,8 +185,8 @@ summary:focus-visible {
 .section--dark p { color: var(--text-inverse-muted); }
 
 .section--warm { background: var(--offwhite); }
-.section--sand { background: var(--egg-deep); }
-.section--white { background: var(--white); }
+.section--sand { background: var(--offwhite); }
+.section--white { background: var(--offwhite); }
 
 .section-head {
   max-width: 760px;
@@ -626,7 +626,7 @@ summary:focus-visible {
 
 /* ---------- Benefit strip ---------- */
 .benefit-strip {
-  background: var(--sand);
+  background: var(--offwhite);
 }
 
 .benefit-grid {
