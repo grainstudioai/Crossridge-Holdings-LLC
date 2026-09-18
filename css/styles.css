@@ -746,6 +746,14 @@ summary:focus-visible {
 .img-placeholder--square { aspect-ratio: 1/1; }
 .img-placeholder--tall { aspect-ratio: 3/4; }
 
+.section-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-soft);
+}
+
 /* ---------- Property type cards ---------- */
 .card-grid {
   display: grid;
