@@ -8,7 +8,7 @@
   --navy: #0F2138;
   --navy-deep: #091223;
   --navy-soft: #1E3F5F;
-  --offwhite: #FAF7F1;
+  --offwhite: #FAFAF7;
   --egg-deep: #F1EDE3;
   --sand: #F0EFEA;
   --sand-deep: #E2E6E9;
@@ -16,12 +16,13 @@
   --orange: #F07C1D;
   --orange-deep: #D96A0E;
 
-  --text-body: #111111;
-  --text-muted: #47473F;
+  --heading: #17201C;
+  --text-body: #000000;
+  --text-muted: #5F6662;
   --text-inverse: #FFFFFF;
   --text-inverse-muted: #C7D2DC;
 
-  --border-soft: rgba(17, 17, 17, 0.10);
+  --border-soft: #E7E8E4;
   --border-soft-inverse: rgba(255, 255, 255, 0.16);
 
   --font-display: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -89,7 +90,7 @@ h1, h2, .font-display {
   font-family: var(--font-display);
   font-weight: 700;
   line-height: 1.15;
-  color: var(--text-body);
+  color: var(--heading);
   letter-spacing: -0.01em;
 }
 
@@ -97,7 +98,7 @@ h3 {
   font-family: var(--font-ui);
   font-weight: 600;
   line-height: 1.25;
-  color: var(--text-body);
+  color: var(--heading);
   letter-spacing: -0.005em;
 }
 
@@ -495,6 +496,10 @@ summary:focus-visible {
 @media (min-width: 900px) {
   .hero-stat-row { grid-template-columns: repeat(4, 1fr); }
 }
+.hero-stat-row--3 { max-width: 690px; }
+@media (min-width: 700px) {
+  .hero-stat-row--3 { grid-template-columns: repeat(3, 1fr); }
+}
 .hero-stat {
   display: flex;
   gap: 0.7rem;
@@ -667,27 +672,36 @@ summary:focus-visible {
   .two-col--reverse > * { direction: ltr; }
 }
 
+.value-copy h2 + .section-lede,
+.value-copy .section-lede + .section-lede { margin-top: var(--space-3); }
+.value-copy .point-list { margin-top: var(--space-5); }
+
 .point-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-2) var(--space-3);
+  gap: var(--space-3) var(--space-3);
   margin-top: var(--space-4);
 }
 
 .point-list li {
   display: flex;
   gap: 0.6rem;
-  align-items: flex-start;
+  align-items: center;
   font-weight: 600;
   color: var(--text-body);
+  line-height: 1.4;
 }
 
-.point-list li svg { flex: none; margin-top: 3px; color: var(--navy); }
+.point-list li svg { flex: none; color: var(--navy); }
+
+@media (max-width: 560px) {
+  .point-list { grid-template-columns: 1fr; }
+}
 
 .check-list {
   display: grid;
   gap: 0.75rem;
-  margin-top: var(--space-3);
+  margin-top: var(--space-4);
 }
 .check-list li {
   display: flex;
